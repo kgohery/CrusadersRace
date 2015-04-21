@@ -1,4 +1,312 @@
+/*** uncss> filename: dist/css/bootstrap.css ***/
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+figure,
+section {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+}
+
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-menu-down:before {
+  content: "\e259";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h2,
+h3,
+h4 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-xs-4,
+.col-sm-4,
+.col-sm-6,
+.col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-xs-4,
+.col-xs-12 {
+  float: left;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.col-xs-4 {
+  width: 33.33333333%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-4,
+  .col-sm-6 {
+    float: left;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+}
+
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/*# sourceMappingURL=bootstrap.css.map */
+
+/*** uncss> filename: dist/css/styles.css ***/
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:900,400);
+
 .cmn-toggle-switch {
   opacity: 0.5;
   z-index: 9999;
@@ -23,9 +331,11 @@
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
+
 .cmn-toggle-switch:focus {
   outline: none;
 }
+
 .cmn-toggle-switch span {
   display: block;
   position: absolute;
@@ -35,6 +345,7 @@
   height: 3px;
   background: white;
 }
+
 .cmn-toggle-switch span::before,
 .cmn-toggle-switch span::after {
   position: absolute;
@@ -45,25 +356,31 @@
   background-color: #fff;
   content: "";
 }
+
 .cmn-toggle-switch span::before {
   top: -13px;
 }
+
 .cmn-toggle-switch span::after {
   bottom: -13px;
 }
+
 /**
  * Style 2
  * 
  * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
  * down to center and transform into an "x".
  */
+
 .cmn-toggle-switch__htx {
   background-color: #41a6dd;
 }
+
 .cmn-toggle-switch__htx span {
   -webkit-transition: background 0 0.3s;
   transition: background 0 0.3s;
 }
+
 .cmn-toggle-switch__htx span::before,
 .cmn-toggle-switch__htx span::after {
   -webkit-transition-duration: 0.3s, 0.3s;
@@ -71,86 +388,79 @@
   -webkit-transition-delay: 0.3s, 0;
   transition-delay: 0.3s, 0;
 }
+
 .cmn-toggle-switch__htx span::before {
   -webkit-transition-property: top, -webkit-transform;
   transition-property: top, transform;
 }
+
 .cmn-toggle-switch__htx span::after {
   -webkit-transition-property: bottom, -webkit-transform;
   transition-property: bottom, transform;
 }
+
 /* active state, i.e. menu open */
-.cmn-toggle-switch__htx.active span {
-  background: none;
-}
-.cmn-toggle-switch__htx.active span::before {
-  top: 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.cmn-toggle-switch__htx.active span::after {
-  bottom: 0;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.cmn-toggle-switch__htx.active span::before,
-.cmn-toggle-switch__htx.active span::after {
-  -webkit-transition-delay: 0, 0.3s;
-  transition-delay: 0, 0.3s;
-}
+
 @-webkit-keyframes bounce {
   50% {
     transform: translate(0px, -15px);
   }
+
   100% {
     transform: translate(0px, 0px);
   }
 }
+
 @-moz-keyframes bounce {
   50% {
     transform: translate(0px, -15px);
   }
+
   100% {
     transform: translate(0px, 0px);
   }
 }
+
 @-o-keyframes bounce {
   50% {
     transform: translate(0px, -15px);
   }
+
   100% {
     transform: translate(0px, 0px);
   }
 }
+
 @keyframes bounce {
   50% {
     transform: translate(0px, -15px);
   }
+
   100% {
     transform: translate(0px, 0px);
   }
 }
+
 body {
   font-family: Raleway;
   font-weight: 400;
   font-size: 14px;
 }
+
 ::selection {
   color: #41a6dd;
   background: none;
 }
-h1,
+
 h2,
 h3,
-h4,
-h5 {
+h4 {
   font-family: Raleway;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
 }
+
 h2 {
   font-size: 5em;
   background: #282927;
@@ -158,35 +468,33 @@ h2 {
   padding: 15px 0;
   margin: 0;
 }
+
 h3 {
   font-size: 2.5em;
   color: #41a6dd;
 }
+
 h4 {
   font-size: 1.5em;
   color: #282927;
 }
+
 a {
   color: #41a6dd;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 .container-fluid #register {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 99;
 }
-.container-fluid #register.fixed {
-  position: fixed;
-  top: -50px;
-  right: 40px;
-}
-.container-fluid #register.fixed a {
-  padding: 45px 0 0;
-}
+
 .container-fluid #register a {
   display: block;
   background: #282927;
@@ -202,9 +510,11 @@ a:hover {
   font-size: 1.25em;
   text-align: center;
 }
+
 .container-fluid #register a:hover {
   color: #41a6dd;
 }
+
 .container-fluid .landing {
   position: relative;
   background-image: url('/images/runners-grey.jpg');
@@ -213,18 +523,22 @@ a:hover {
   border-top: solid 5px #41a6dd;
   border-bottom: solid 5px #41a6dd;
 }
+
 .container-fluid .landing .logo {
   padding: 20px 0 0 0;
   text-align: center;
 }
+
 .container-fluid .landing .logo img {
   width: 50%;
 }
+
 .container-fluid .landing #bouncing-arrow {
   position: relative;
   bottom: 5px;
   text-align: center;
 }
+
 .container-fluid .landing #bouncing-arrow .glyphicon {
   color: white;
   font-size: 3em;
@@ -234,33 +548,41 @@ a:hover {
   -o-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
+
 .container-fluid .landing .social-links {
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 3em;
 }
+
 .container-fluid .landing .social-links .fa {
   padding: 0 0 0 20px;
 }
+
 .container-fluid #race {
   background: white;
 }
+
 .container-fluid #race .where-why p {
   text-align: justify;
   padding: 0 5%;
 }
+
 .container-fluid #race .highlights {
   background: white;
   padding: 20px 0;
 }
+
 .container-fluid #race .highlights div:nth-child(2) {
   border-left: solid 5px #41a6dd;
   border-right: solid 5px #41a6dd;
 }
+
 .container-fluid #route section {
   padding: 0 0 0 0;
 }
+
 .container-fluid #route figure {
   background-image: url('/images/map.jpg');
   background-size: cover;
@@ -268,18 +590,23 @@ a:hover {
   width: 100%;
   height: 300px;
 }
+
 .container-fluid #sponsors > div {
   padding: 20px 0;
 }
+
 .container-fluid #footer {
   background: #282927;
   color: #41a6dd;
   padding: 20px 0;
 }
+
 .container-fluid #footer a {
   padding: 0 20px 0 0;
 }
+
 .container-fluid #footer a .fa {
   font-size: 2.5em;
 }
+
 /*# sourceMappingURL=dist/css/styles.css.map */

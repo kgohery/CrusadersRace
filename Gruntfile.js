@@ -252,6 +252,10 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
+      minifyCustom: {
+        src: 'dist/css/tidy.css',
+        dest: 'dist/css/tidy.min.css'
+      },
       docs: {
         src: [
           'docs/assets/css/src/pygments-manni.css',
@@ -420,6 +424,17 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+
+    uncss: {
+        dist: {
+          options: {
+            stylesheets: ['dist/css/bootstrap.css', 'dist/css/styles.css']
+          },
+          files: {
+              'dist/css/tidy.css': ['index.html']
+          }
+        }
     }
 
   });
@@ -470,7 +485,7 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileCustom']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'usebanner', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'uncss', 'cssmin:minifyCustom']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
@@ -523,4 +538,6 @@ module.exports = function (grunt) {
       done();
     });
   });
+
+  
 };
