@@ -1,0 +1,292 @@
+/*!
+ * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:900,400);
+.cmn-toggle-switch {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  display: block;
+  width: 50px;
+  height: 50px;
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+  opacity: .5;
+  -webkit-transition: background .3s;
+          transition: background .3s;
+
+     -moz-appearance: none;
+          appearance: none;
+}
+.cmn-toggle-switch:focus {
+  outline: none;
+}
+.cmn-toggle-switch span {
+  position: absolute;
+  top: 22px;
+  right: 9px;
+  left: 9px;
+  display: block;
+  height: 3px;
+  background: white;
+}
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background-color: #fff;
+}
+.cmn-toggle-switch span::before {
+  top: -13px;
+}
+.cmn-toggle-switch span::after {
+  bottom: -13px;
+}
+/**
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx {
+  background-color: #41a6dd;
+}
+.cmn-toggle-switch__htx span {
+  -webkit-transition: background 0 .3s;
+          transition: background 0 .3s;
+}
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-delay: .3s, 0;
+          transition-delay: .3s, 0;
+  -webkit-transition-duration: .3s, .3s;
+          transition-duration: .3s, .3s;
+}
+.cmn-toggle-switch__htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active span {
+  background: none;
+}
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  -webkit-transition-delay: 0, .3s;
+          transition-delay: 0, .3s;
+}
+@-webkit-keyframes bounce {
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@-moz-keyframes bounce {
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@-o-keyframes bounce {
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes bounce {
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+body {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 400;
+}
+::selection {
+  color: #41a6dd;
+  background: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Raleway;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2 {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 5em;
+  color: #41a6dd;
+  background: #282927;
+}
+h3 {
+  font-size: 2.5em;
+  color: #41a6dd;
+}
+h4 {
+  font-size: 1.5em;
+  color: #282927;
+}
+a {
+  color: #41a6dd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container-fluid #register {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+}
+.container-fluid #register.fixed {
+  position: fixed;
+  top: -50px;
+  right: 40px;
+}
+.container-fluid #register.fixed a {
+  padding: 45px 0 0;
+}
+.container-fluid #register a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 25px 0;
+  font-size: 1.25em;
+  font-weight: 900;
+  line-height: 1.25em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background: #282927;
+  border: solid 5px #41a6dd;
+  border-radius: 50%;
+}
+.container-fluid #register a:hover {
+  color: #41a6dd;
+}
+.container-fluid .landing {
+  position: relative;
+  background-image: url('/images/runners-grey.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: solid 5px #41a6dd;
+  border-bottom: solid 5px #41a6dd;
+}
+.container-fluid .landing .logo {
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+.container-fluid .landing .logo img {
+  width: 50%;
+}
+.container-fluid .landing #bouncing-arrow {
+  position: relative;
+  bottom: 5px;
+  text-align: center;
+}
+.container-fluid .landing #bouncing-arrow .glyphicon {
+  font-size: 3em;
+  color: white;
+  -webkit-animation: bounce 3s infinite;
+     -moz-animation: bounce 3s infinite;
+      -ms-animation: bounce 3s infinite;
+       -o-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
+}
+.container-fluid .landing .social-links {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 3em;
+}
+.container-fluid .landing .social-links .fa {
+  padding: 0 0 0 20px;
+}
+.container-fluid #race {
+  background: white;
+}
+.container-fluid #race .where-why p {
+  padding: 0 5%;
+  text-align: justify;
+}
+.container-fluid #race .highlights {
+  padding: 20px 0;
+  background: white;
+}
+.container-fluid #race .highlights div:nth-child(2) {
+  border-right: solid 5px #41a6dd;
+  border-left: solid 5px #41a6dd;
+}
+.container-fluid #route section {
+  padding: 0 0 0 0;
+}
+.container-fluid #route figure {
+  width: 100%;
+  height: 300px;
+  background-image: url('/images/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container-fluid #sponsors > div {
+  padding: 20px 0;
+}
+.container-fluid #footer {
+  padding: 20px 0;
+  color: #41a6dd;
+  background: #282927;
+}
+.container-fluid #footer a {
+  padding: 0 20px 0 0;
+}
+.container-fluid #footer a .fa {
+  font-size: 2.5em;
+}
+/*# sourceMappingURL=dist/css/styles.css.map */
