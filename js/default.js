@@ -1,6 +1,8 @@
 $(function() {
 	"use strict";
 
+  var i, len;
+
   var resizeLanding = function () {
 		$(".landing").height($(window).height());
 	}
@@ -12,10 +14,19 @@ $(function() {
 	});
 
 
-  $('a[href*=#]:not([href=#])').click(function(e) {
+  $('a.nav[href*=#]:not([href=#])').click(function(e) {
     e.preventDefault();
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      
       var target = $(this.hash);
+      history.pushState(null, null, this.hash);
+
+      // toggle the menu
+      if ($(this).hasClass("menu")) {
+        // hide the hamburger menu
+        $(".cmn-toggle-switch").click();
+      }
+
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
@@ -29,30 +40,106 @@ $(function() {
     }
   });
 
-  function changeHash(hash) {
-    //window.location.hash = target.selector;
-    console.log("Animation complete: " + hash);
-  }
-
+  // Scroll the window to the anchor
   $(window).scroll(function () {
     if( $(window).scrollTop() > $('#register').offset().top && !($('#register').hasClass('fixed'))){
       $('#register').addClass('fixed');
-    } else if ($(window).scrollTop() == 0){
+    } else if ($(window).scrollTop() === 0){
       $('#register').removeClass('fixed');
     }
 	});
 
-  var toggles = document.querySelectorAll(".cmn-toggle-switch");
 
-  for (var i = toggles.length - 1; i >= 0; i--) {
-    var toggle = toggles[i];
-    toggleHandler(toggle);
-  };
+  // Toggle the hamburger menu
+  var toggles = document.querySelectorAll(".cmn-toggle-switch");
 
   function toggleHandler(toggle) {
     toggle.addEventListener( "click", function(e) {
       e.preventDefault();
-      (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+      var menu = $("#hamburger");
+      if (this.classList.contains("active") === true) {
+        this.classList.remove("active");
+        menu.removeClass("show");
+      } else {
+        this.classList.add("active");
+        menu.addClass("show");
+      }
     });
   }
+
+  for (i=toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  }
+
+
+
+
+
+
+  // **********************
+  // ACCORDION
+  // **********************
+  var d = document,
+  accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+  setAccordionAria,
+  switchAccordion,
+  skipClickDelay,
+  setAriaAttr,
+  touchSupported = ('ontouchstart' in window),
+  pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e){
+    e.preventDefault();
+    e.target.click();
+  }
+
+  setAriaAttr = function(el, ariaType, newProperty){
+    el.setAttribute(ariaType, newProperty);
+  };
+  setAccordionAria = function(el1, el2, expanded){
+    switch(expanded) {
+      case "true":
+        setAriaAttr(el1, 'aria-expanded', 'true');
+        setAriaAttr(el2, 'aria-hidden', 'false');
+        break;
+      case "false":
+        setAriaAttr(el1, 'aria-expanded', 'false');
+        setAriaAttr(el2, 'aria-hidden', 'true');
+        break;
+      default:
+        break;
+    }
+  };
+//function
+switchAccordion = function(e) {
+  e.preventDefault();
+  var thisAnswer = e.target.parentNode.nextElementSibling;
+  var thisQuestion = e.target;
+  if(thisAnswer.classList.contains('is-collapsed')) {
+    setAccordionAria(thisQuestion, thisAnswer, 'true');
+  } else {
+    setAccordionAria(thisQuestion, thisAnswer, 'false');
+  }
+    thisQuestion.classList.toggle('is-collapsed');
+    thisQuestion.classList.toggle('is-expanded');
+    thisAnswer.classList.toggle('is-collapsed');
+    thisAnswer.classList.toggle('is-expanded');
+  
+    thisAnswer.classList.toggle('animateIn');
+  };
+
+  for (i=0,len=accordionToggles.length; i<len; i++) {
+    if(touchSupported) {
+      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    }
+    if(pointerSupported){
+      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    }
+    accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+  // **********************
+  // END ACCORDION
+  // **********************
+  
 });
