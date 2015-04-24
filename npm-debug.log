@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose install where, deps [ 'C:\\_code\\Crusaders\\race',
+5 verbose install   [ 'btoa',
+5 verbose install     'glob',
+5 verbose install     'grunt',
+5 verbose install     'grunt-autoprefixer',
+5 verbose install     'grunt-banner',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-compress',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-connect',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-csslint',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-less',
+5 verbose install     'grunt-contrib-qunit',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-csscomb',
+5 verbose install     'grunt-exec',
+5 verbose install     'grunt-html',
+5 verbose install     'grunt-jekyll',
+5 verbose install     'grunt-jscs',
+5 verbose install     'grunt-saucelabs',
+5 verbose install     'grunt-sed',
+5 verbose install     'grunt-uncss',
+5 verbose install     'load-grunt-tasks',
+5 verbose install     'markdown-it',
+5 verbose install     'npm-shrinkwrap',
+5 verbose install     'time-grunt' ] ]
+6 verbose install where, peers [ 'C:\\_code\\Crusaders\\race', [] ]
+7 info preinstall bootstrap@3.3.4
+8 verbose already installed skipping grunt-contrib-jade@~0.14.1 C:\_code\Crusaders\race
+9 verbose already installed skipping grunt-contrib-jshint@~0.11.0 C:\_code\Crusaders\race
+10 verbose already installed skipping grunt-contrib-less@~1.0.0 C:\_code\Crusaders\race
+11 verbose already installed skipping grunt-contrib-qunit@~0.5.2 C:\_code\Crusaders\race
+12 verbose already installed skipping grunt-contrib-uglify@~0.8.0 C:\_code\Crusaders\race
+13 verbose already installed skipping grunt-contrib-watch@~0.6.1 C:\_code\Crusaders\race
+14 verbose already installed skipping grunt-csscomb@~3.0.0 C:\_code\Crusaders\race
+15 verbose already installed skipping grunt-exec@~0.4.6 C:\_code\Crusaders\race
+16 verbose already installed skipping grunt-html@~4.0.1 C:\_code\Crusaders\race
+17 verbose already installed skipping grunt-jekyll@~0.4.2 C:\_code\Crusaders\race
+18 verbose already installed skipping grunt-jscs@~1.5.0 C:\_code\Crusaders\race
+19 verbose already installed skipping grunt-saucelabs@~8.6.0 C:\_code\Crusaders\race
+20 verbose already installed skipping grunt-sed@~0.1.1 C:\_code\Crusaders\race
+21 silly cache add args [ 'grunt-uncss@^0.4.2', null ]
+22 verbose cache add spec grunt-uncss@^0.4.2
+23 silly cache add parsed spec { raw: 'grunt-uncss@^0.4.2',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'grunt-uncss',
+23 silly cache add   rawSpec: '^0.4.2',
+23 silly cache add   spec: '>=0.4.2 <0.5.0',
+23 silly cache add   type: 'range' }
+24 verbose addNamed grunt-uncss@>=0.4.2 <0.5.0
+25 silly addNamed semver.valid null
+26 silly addNamed semver.validRange >=0.4.2 <0.5.0
+27 silly addNameRange { name: 'grunt-uncss', range: '>=0.4.2 <0.5.0', hasData: false }
+28 silly mapToRegistry name grunt-uncss
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/grunt-uncss
+32 verbose addNameRange registry:https://registry.npmjs.org/grunt-uncss not in flight; fetching
+33 verbose already installed skipping load-grunt-tasks@~3.1.0 C:\_code\Crusaders\race
+34 verbose already installed skipping markdown-it@^4.0.1 C:\_code\Crusaders\race
+35 verbose already installed skipping npm-shrinkwrap@^200.1.0 C:\_code\Crusaders\race
+36 verbose already installed skipping time-grunt@^1.1.0 C:\_code\Crusaders\race
+37 verbose already installed skipping btoa@~1.1.2 C:\_code\Crusaders\race
+38 verbose already installed skipping glob@~5.0.3 C:\_code\Crusaders\race
+39 verbose already installed skipping grunt@~0.4.5 C:\_code\Crusaders\race
+40 verbose already installed skipping grunt-autoprefixer@~2.2.0 C:\_code\Crusaders\race
+41 verbose already installed skipping grunt-banner@~0.3.1 C:\_code\Crusaders\race
+42 verbose already installed skipping grunt-contrib-clean@~0.6.0 C:\_code\Crusaders\race
+43 verbose already installed skipping grunt-contrib-compress@~0.13.0 C:\_code\Crusaders\race
+44 verbose already installed skipping grunt-contrib-concat@~0.5.1 C:\_code\Crusaders\race
+45 verbose already installed skipping grunt-contrib-connect@~0.9.0 C:\_code\Crusaders\race
+46 verbose already installed skipping grunt-contrib-copy@~0.8.0 C:\_code\Crusaders\race
+47 verbose already installed skipping grunt-contrib-csslint@~0.4.0 C:\_code\Crusaders\race
+48 verbose already installed skipping grunt-contrib-cssmin@~0.12.2 C:\_code\Crusaders\race
+49 verbose request uri https://registry.npmjs.org/grunt-uncss
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 3:34:48 PM
+52 verbose request id 224230db9fcc044c
+53 http request GET https://registry.npmjs.org/grunt-uncss
+54 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+55 info attempt registry request try #2 at 3:34:58 PM
+56 http request GET https://registry.npmjs.org/grunt-uncss
+57 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+58 info attempt registry request try #3 at 3:35:58 PM
+59 http request GET https://registry.npmjs.org/grunt-uncss
+60 verbose stack Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+60 verbose stack
+60 verbose stack     at ClientRequest.onError (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:168:17)
+60 verbose stack     at ClientRequest.g (events.js:199:16)
+60 verbose stack     at ClientRequest.emit (events.js:107:17)
+60 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:272:9)
+60 verbose stack     at TLSSocket.emit (events.js:129:20)
+60 verbose stack     at onwriteError (_stream_writable.js:317:10)
+60 verbose stack     at onwrite (_stream_writable.js:335:5)
+60 verbose stack     at WritableState.onwrite (_stream_writable.js:105:5)
+60 verbose stack     at fireErrorCallbacks (net.js:448:13)
+60 verbose stack     at TLSSocket.Socket._destroy (net.js:486:3)
+61 verbose cwd C:\_code\Crusaders\race
+62 error Windows_NT 6.1.7601
+63 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+64 error node v0.12.0
+65 error npm  v2.5.1
+66 error code ECONNRESET
+67 error network tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+67 error network
+67 error network This is most likely not a problem with npm itself
+67 error network and is related to network connectivity.
+67 error network In most cases you are behind a proxy or have bad network settings.
+67 error network
+67 error network If you are behind a proxy, please make sure that the
+67 error network 'proxy' config is set properly.  See: 'npm help config'
+68 verbose exit [ 1, true ]
