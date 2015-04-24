@@ -440,12 +440,20 @@ a:hover {
 .container-fluid #route section {
   padding: 0 0 0 0;
 }
+.container-fluid #route section > div {
+  padding: 20px 0;
+}
 .container-fluid #route figure {
   background-image: url('/images/map.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 300px;
+}
+@media (max-width: 480px) {
+  .container-fluid #route figure {
+    height: 150px;
+  }
 }
 .container-fluid #sponsors {
   background: #282927;

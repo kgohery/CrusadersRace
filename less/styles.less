@@ -217,6 +217,10 @@ a {
 
 		section {
 			padding: 0 0 0 0;
+
+			> div {
+				padding: 20px 0;
+			}
 		}
 
 		figure {
@@ -225,6 +229,10 @@ a {
 			background-repeat: no-repeat;
 			width: 100%;
 			height: 300px;
+
+			@media (max-width: @screen-xs-min) {
+				height: 150px;
+			}
 		}
 	}
 
