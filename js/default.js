@@ -130,12 +130,12 @@ switchAccordion = function(e) {
   };
 
   for (i=0,len=accordionToggles.length; i<len; i++) {
-    if(touchSupported) {
-      accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
-    }
-    if(pointerSupported){
-      accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
-    }
+    // if(touchSupported) {
+    //   accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+    // }
+    // if(pointerSupported){
+    //   accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+    // }
     accordionToggles[i].addEventListener('click', switchAccordion, false);
   }
   // **********************

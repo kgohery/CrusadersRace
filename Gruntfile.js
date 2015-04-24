@@ -159,7 +159,7 @@ module.exports = function (grunt) {
       compileCore: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true
         },
         src: 'less/bootstrap.less',
@@ -168,7 +168,7 @@ module.exports = function (grunt) {
       compileTheme: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true
         },
         src: 'less/theme.less',
@@ -177,7 +177,7 @@ module.exports = function (grunt) {
       compileCustom: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true
         },
         src: 'less/styles.less',
@@ -481,8 +481,8 @@ module.exports = function (grunt) {
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileCustom']);
-  //grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'uncss', 'cssmin:minifyCustom']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:minifyCustom']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'uncss', 'cssmin:minifyCustom']);
+  //grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:minifyCustom']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);

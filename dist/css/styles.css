@@ -283,6 +283,10 @@ body {
   font-size: 14px;
   color: #282927;
 }
+body p {
+  padding: 1em 2em 1em 2em;
+  text-align: justify;
+}
 ::selection {
   color: #41a6dd;
   background: none;
@@ -311,8 +315,8 @@ h3 {
 }
 @media (max-width: 480px) {
   h2 {
-    font-size: 3em;
-    border-width: 2px;
+    font-size: 4em;
+    border-width: 3px;
   }
   h3 {
     font-size: 2em;
@@ -443,17 +447,8 @@ a:hover {
 .container-fluid #route section > div {
   padding: 20px 0;
 }
-.container-fluid #route figure {
-  background-image: url('/images/map.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+.container-fluid #route figure > img {
   width: 100%;
-  height: 300px;
-}
-@media (max-width: 480px) {
-  .container-fluid #route figure {
-    height: 150px;
-  }
 }
 .container-fluid #sponsors {
   background: #282927;
@@ -524,4 +519,3 @@ a:hover {
   -o-animation: hamburgerHide 0.5s normal ease both 1;
   animation: hamburgerHide 0.5s normal ease both 1;
 }
-/*# sourceMappingURL=dist/css/styles.css.map */
