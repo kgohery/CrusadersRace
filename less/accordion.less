@@ -45,13 +45,11 @@
     font-size:1em;
     line-height:1.5em;
 
-    a {
+    a, a:active, a:visited, a:focus, a:hover {
       color: @blue;
       text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
-      }
+      
     }
   }
 
@@ -95,7 +93,7 @@
     height:auto;
     overflow:hidden; 
     //SHAME: magic number to allow the accordion to animate
-    max-height: 100em;
+    max-height: 1000em;
     
     transition: max-height 0.3s;   
  

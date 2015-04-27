@@ -13,17 +13,8 @@
 @import "hamburger.less";
 @import "variables.less";
 
-
-@-webkit-keyframes bounce { 50% { transform: translate(0px, -15px); } 100%  { transform: translate(0px, 0px); } }
-@-moz-keyframes bounce { 50% { transform: translate(0px, -15px); } 100%  { transform: translate(0px, 0px); } }
-@-o-keyframes bounce { 50% { transform: translate(0px, -15px); } 100%  { transform: translate(0px, 0px); } }
 @keyframes bounce { 50% { transform: translate(0px, -15px); } 100%  { transform: translate(0px, 0px); } }
-
-@-webkit-keyframes hamburgerShow { 0% { opacity: 0;	} 100% { opacity:1;	}}
-@-moz-keyframes hamburgerShow { 0% { opacity: 0;	} 100% { opacity:1;	}}
-@-o-keyframes hamburgerShow { 0% { opacity: 0;	} 100% { opacity:1;	}}
 @keyframes hamburgerShow { 0% { opacity: 0;	} 100% { opacity:1;	}}
-//@keyframes hamburgerHide { 0% { opacity: 1;	} 100% { opacity:0;	}}
 
 body {
 	font-family: Raleway;
@@ -133,13 +124,13 @@ a {
 
 	.landing {
 		position: relative;
-		background-image: url('/images/runners-grey.jpg');
+		background-image: url('../images/runners-grey.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		border-top: solid 5px @blue;
 
 		.logo {
-			position: relative;
+		  position: relative;
 		  top: 35%;
 		  transform: translateY(-35%);
 			text-align: center;

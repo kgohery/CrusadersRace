@@ -138,6 +138,10 @@ module.exports = function (grunt) {
         src: '<%= concat.bootstrap.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
+      custom: {
+        src: '<%= concat.custom.dest %>',
+        dest: 'dist/js/default.min.js'
+      },
       customize: {
         src: configBridge.paths.customizerJs,
         dest: 'docs/assets/js/customize.min.js'
@@ -174,6 +178,15 @@ module.exports = function (grunt) {
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
       },
+      compileFontAwesome: {
+        options: {
+          strictMath: true,
+          sourceMap: false,
+          outputSourceFiles: true
+        },
+        src: 'font-awesome-4.3.0/less/font-awesome.less',
+        dest: 'dist/css/font-awesome.css'
+      },
       compileCustom: {
         options: {
           strictMath: true,
@@ -193,7 +206,7 @@ module.exports = function (grunt) {
         options: {
           map: true
         },
-        src: 'dist/css/<%= pkg.name %>.css'
+        src: ['dist/css/<%= pkg.name %>.css', 'dist/css/styles.css']
       },
       theme: {
         options: {
@@ -248,9 +261,21 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
+      minifyFontAwesome: {
+        src: 'dist/css/<%= pkg.name %>-theme.css',
+        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+      },
+      minifyBootstrapTidy: {
+        src: 'dist/css/bootstrap-tidy.css',
+        dest: 'dist/css/bootstrap-tidy.min.css'
+      },
+      minifyExternals: {
+        src: 'dist/css/tidy-externals.css',
+        dest: 'dist/css/tidy-externals.min.css'
+      },
       minifyCustom: {
-        src: 'dist/css/tidy.css',
-        dest: 'dist/css/tidy.min.css'
+        src: 'dist/css/styles.css',
+        dest: 'dist/css/styles.min.css'
       },
       docs: {
         src: [
@@ -300,6 +325,14 @@ module.exports = function (grunt) {
         expand: true,
         src: 'fonts/*',
         dest: 'dist/'
+      },
+      fontAwesomeFonts: {
+        expand: true,
+        cwd: 'font-awesome-4.3.0/fonts/',
+        src: '**',
+        dest: 'dist/fonts/',
+        flatten: true,
+        filter: 'isFile',
       },
       docs: {
         expand: true,
@@ -423,14 +456,53 @@ module.exports = function (grunt) {
     },
 
     uncss: {
-        dist: {
+        externals: {
           options: {
-            stylesheets: ['dist/css/bootstrap.css', 'dist/css/styles.css']
+            stylesheets: ['dist/css/bootstrap.css', 'dist/css/font-awesome.css']
           },
           files: {
-              'dist/css/tidy.css': ['index.html']
+              'dist/css/tidy-externals.css': ['index.html']
           }
         }
+    },
+
+    imagemin: {   
+      jpg: {                         // Another target
+        options: {
+          progressive: true
+        },
+
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'images/',                   // Src matches are relative to this path
+          src: ['**/*.jpg'],   // Actual patterns to match
+          dest: 'dist/images/'                  // Destination path prefix
+        }]
+      },
+      png: {                         // Another target
+        options: {
+          optimizationLevel: 7
+        },
+
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'images/',                   // Src matches are relative to this path
+          src: ['**/*.png'],   // Actual patterns to match
+          dest: 'dist/images/'                  // Destination path prefix
+        }]
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/index.html': 'index.html'
+        }
+      }
     }
 
   });
@@ -477,18 +549,24 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
+  grunt.registerTask('dist-js', ['concat', 'uglify:core', 'uglify:custom']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileCustom']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileFontAwesome', 'less:compileCustom']);
   //grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'uncss', 'cssmin:minifyCustom']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:minifyCustom']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'uncss', 'cssmin']);
+
+  // Image Minification task
+  grunt.registerTask('dist-image', ['imagemin:jpg', 'imagemin:png']);
+
+  // HTML minification
+  grunt.registerTask('dist-html', ['htmlmin']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:fontAwesomeFonts', 'dist-js', 'dist-image']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts']);
+  grunt.registerTask('default', ['clean:dist', 'dist-css', 'dist-js', 'copy:fonts', 'copy:fontAwesomeFonts', 'imagemin']);
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
