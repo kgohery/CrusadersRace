@@ -1,0 +1,214 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose install where, deps [ 'C:\\_code\\Crusaders\\race',
+5 verbose install   [ 'btoa',
+5 verbose install     'glob',
+5 verbose install     'grunt',
+5 verbose install     'grunt-autoprefixer',
+5 verbose install     'grunt-banner',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-compress',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-connect',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-csslint',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-htmlmin',
+5 verbose install     'grunt-contrib-imagemin',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-less',
+5 verbose install     'grunt-contrib-qunit',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-csscomb',
+5 verbose install     'grunt-exec',
+5 verbose install     'grunt-html',
+5 verbose install     'grunt-jekyll',
+5 verbose install     'grunt-jscs',
+5 verbose install     'grunt-saucelabs',
+5 verbose install     'grunt-sed',
+5 verbose install     'grunt-uncss',
+5 verbose install     'imagemin-jpegtran',
+5 verbose install     'load-grunt-tasks',
+5 verbose install     'markdown-it',
+5 verbose install     'npm-shrinkwrap',
+5 verbose install     'time-grunt' ] ]
+6 verbose install where, peers [ 'C:\\_code\\Crusaders\\race', [] ]
+7 info preinstall bootstrap@3.3.4
+8 verbose already installed skipping grunt-sed@~0.1.1 C:\_code\Crusaders\race
+9 silly cache add args [ 'grunt-uncss@^0.4.2', null ]
+10 verbose cache add spec grunt-uncss@^0.4.2
+11 silly cache add parsed spec { raw: 'grunt-uncss@^0.4.2',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'grunt-uncss',
+11 silly cache add   rawSpec: '^0.4.2',
+11 silly cache add   spec: '>=0.4.2 <0.5.0',
+11 silly cache add   type: 'range' }
+12 verbose addNamed grunt-uncss@>=0.4.2 <0.5.0
+13 silly addNamed semver.valid null
+14 silly addNamed semver.validRange >=0.4.2 <0.5.0
+15 silly addNameRange { name: 'grunt-uncss', range: '>=0.4.2 <0.5.0', hasData: false }
+16 silly mapToRegistry name grunt-uncss
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/grunt-uncss
+20 verbose addNameRange registry:https://registry.npmjs.org/grunt-uncss not in flight; fetching
+21 silly cache add args [ 'imagemin-jpegtran@^4.1.0', null ]
+22 verbose cache add spec imagemin-jpegtran@^4.1.0
+23 silly cache add parsed spec { raw: 'imagemin-jpegtran@^4.1.0',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'imagemin-jpegtran',
+23 silly cache add   rawSpec: '^4.1.0',
+23 silly cache add   spec: '>=4.1.0 <5.0.0',
+23 silly cache add   type: 'range' }
+24 verbose addNamed imagemin-jpegtran@>=4.1.0 <5.0.0
+25 silly addNamed semver.valid null
+26 silly addNamed semver.validRange >=4.1.0 <5.0.0
+27 silly addNameRange { name: 'imagemin-jpegtran',
+27 silly addNameRange   range: '>=4.1.0 <5.0.0',
+27 silly addNameRange   hasData: false }
+28 silly mapToRegistry name imagemin-jpegtran
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/imagemin-jpegtran
+32 verbose addNameRange registry:https://registry.npmjs.org/imagemin-jpegtran not in flight; fetching
+33 verbose already installed skipping load-grunt-tasks@~3.1.0 C:\_code\Crusaders\race
+34 verbose already installed skipping markdown-it@^4.0.1 C:\_code\Crusaders\race
+35 verbose already installed skipping npm-shrinkwrap@^200.1.0 C:\_code\Crusaders\race
+36 verbose already installed skipping time-grunt@^1.1.0 C:\_code\Crusaders\race
+37 verbose already installed skipping btoa@~1.1.2 C:\_code\Crusaders\race
+38 verbose already installed skipping glob@~5.0.3 C:\_code\Crusaders\race
+39 verbose already installed skipping grunt@~0.4.5 C:\_code\Crusaders\race
+40 verbose already installed skipping grunt-autoprefixer@~2.2.0 C:\_code\Crusaders\race
+41 verbose already installed skipping grunt-banner@~0.3.1 C:\_code\Crusaders\race
+42 verbose already installed skipping grunt-contrib-clean@~0.6.0 C:\_code\Crusaders\race
+43 verbose already installed skipping grunt-contrib-compress@~0.13.0 C:\_code\Crusaders\race
+44 verbose already installed skipping grunt-contrib-concat@~0.5.1 C:\_code\Crusaders\race
+45 verbose already installed skipping grunt-contrib-connect@~0.9.0 C:\_code\Crusaders\race
+46 verbose already installed skipping grunt-contrib-copy@~0.8.0 C:\_code\Crusaders\race
+47 verbose already installed skipping grunt-contrib-csslint@~0.4.0 C:\_code\Crusaders\race
+48 verbose already installed skipping grunt-contrib-cssmin@~0.12.2 C:\_code\Crusaders\race
+49 silly cache add args [ 'grunt-contrib-htmlmin@^0.4.0', null ]
+50 verbose cache add spec grunt-contrib-htmlmin@^0.4.0
+51 silly cache add parsed spec { raw: 'grunt-contrib-htmlmin@^0.4.0',
+51 silly cache add   scope: null,
+51 silly cache add   name: 'grunt-contrib-htmlmin',
+51 silly cache add   rawSpec: '^0.4.0',
+51 silly cache add   spec: '>=0.4.0 <0.5.0',
+51 silly cache add   type: 'range' }
+52 verbose addNamed grunt-contrib-htmlmin@>=0.4.0 <0.5.0
+53 silly addNamed semver.valid null
+54 silly addNamed semver.validRange >=0.4.0 <0.5.0
+55 silly addNameRange { name: 'grunt-contrib-htmlmin',
+55 silly addNameRange   range: '>=0.4.0 <0.5.0',
+55 silly addNameRange   hasData: false }
+56 silly mapToRegistry name grunt-contrib-htmlmin
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/grunt-contrib-htmlmin
+60 verbose addNameRange registry:https://registry.npmjs.org/grunt-contrib-htmlmin not in flight; fetching
+61 silly cache add args [ 'grunt-contrib-imagemin@^0.9.4', null ]
+62 verbose cache add spec grunt-contrib-imagemin@^0.9.4
+63 silly cache add parsed spec { raw: 'grunt-contrib-imagemin@^0.9.4',
+63 silly cache add   scope: null,
+63 silly cache add   name: 'grunt-contrib-imagemin',
+63 silly cache add   rawSpec: '^0.9.4',
+63 silly cache add   spec: '>=0.9.4 <0.10.0',
+63 silly cache add   type: 'range' }
+64 verbose addNamed grunt-contrib-imagemin@>=0.9.4 <0.10.0
+65 silly addNamed semver.valid null
+66 silly addNamed semver.validRange >=0.9.4 <0.10.0
+67 silly addNameRange { name: 'grunt-contrib-imagemin',
+67 silly addNameRange   range: '>=0.9.4 <0.10.0',
+67 silly addNameRange   hasData: false }
+68 silly mapToRegistry name grunt-contrib-imagemin
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry uri https://registry.npmjs.org/grunt-contrib-imagemin
+72 verbose addNameRange registry:https://registry.npmjs.org/grunt-contrib-imagemin not in flight; fetching
+73 verbose already installed skipping grunt-contrib-jade@~0.14.1 C:\_code\Crusaders\race
+74 verbose already installed skipping grunt-contrib-jshint@~0.11.0 C:\_code\Crusaders\race
+75 verbose already installed skipping grunt-contrib-less@~1.0.0 C:\_code\Crusaders\race
+76 verbose already installed skipping grunt-contrib-qunit@~0.5.2 C:\_code\Crusaders\race
+77 verbose already installed skipping grunt-contrib-uglify@~0.8.0 C:\_code\Crusaders\race
+78 verbose already installed skipping grunt-contrib-watch@~0.6.1 C:\_code\Crusaders\race
+79 verbose already installed skipping grunt-csscomb@~3.0.0 C:\_code\Crusaders\race
+80 verbose already installed skipping grunt-exec@~0.4.6 C:\_code\Crusaders\race
+81 verbose already installed skipping grunt-html@~4.0.1 C:\_code\Crusaders\race
+82 verbose already installed skipping grunt-jekyll@~0.4.2 C:\_code\Crusaders\race
+83 verbose already installed skipping grunt-jscs@~1.5.0 C:\_code\Crusaders\race
+84 verbose request uri https://registry.npmjs.org/grunt-uncss
+85 verbose request no auth needed
+86 info attempt registry request try #1 at 4:06:58 PM
+87 verbose request id 53aacf43d06ff0c7
+88 http request GET https://registry.npmjs.org/grunt-uncss
+89 verbose already installed skipping grunt-saucelabs@~8.6.0 C:\_code\Crusaders\race
+90 verbose request uri https://registry.npmjs.org/imagemin-jpegtran
+91 verbose request no auth needed
+92 info attempt registry request try #1 at 4:06:58 PM
+93 http request GET https://registry.npmjs.org/imagemin-jpegtran
+94 verbose request uri https://registry.npmjs.org/grunt-contrib-htmlmin
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 4:06:58 PM
+97 http request GET https://registry.npmjs.org/grunt-contrib-htmlmin
+98 verbose request uri https://registry.npmjs.org/grunt-contrib-imagemin
+99 verbose request no auth needed
+100 info attempt registry request try #1 at 4:06:58 PM
+101 http request GET https://registry.npmjs.org/grunt-contrib-imagemin
+102 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+103 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+104 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+105 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+106 info attempt registry request try #2 at 4:07:08 PM
+107 http request GET https://registry.npmjs.org/grunt-uncss
+108 info attempt registry request try #2 at 4:07:08 PM
+109 http request GET https://registry.npmjs.org/imagemin-jpegtran
+110 info attempt registry request try #2 at 4:07:08 PM
+111 http request GET https://registry.npmjs.org/grunt-contrib-htmlmin
+112 info attempt registry request try #2 at 4:07:08 PM
+113 http request GET https://registry.npmjs.org/grunt-contrib-imagemin
+114 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+115 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+116 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+117 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+118 info attempt registry request try #3 at 4:08:08 PM
+119 http request GET https://registry.npmjs.org/grunt-uncss
+120 info attempt registry request try #3 at 4:08:08 PM
+121 http request GET https://registry.npmjs.org/imagemin-jpegtran
+122 info attempt registry request try #3 at 4:08:08 PM
+123 http request GET https://registry.npmjs.org/grunt-contrib-htmlmin
+124 info attempt registry request try #3 at 4:08:08 PM
+125 http request GET https://registry.npmjs.org/grunt-contrib-imagemin
+126 verbose stack Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+126 verbose stack
+126 verbose stack     at ClientRequest.onError (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:168:17)
+126 verbose stack     at ClientRequest.g (events.js:199:16)
+126 verbose stack     at ClientRequest.emit (events.js:107:17)
+126 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:272:9)
+126 verbose stack     at TLSSocket.emit (events.js:129:20)
+126 verbose stack     at onwriteError (_stream_writable.js:317:10)
+126 verbose stack     at onwrite (_stream_writable.js:335:5)
+126 verbose stack     at WritableState.onwrite (_stream_writable.js:105:5)
+126 verbose stack     at fireErrorCallbacks (net.js:448:13)
+126 verbose stack     at TLSSocket.Socket._destroy (net.js:486:3)
+127 verbose cwd C:\_code\Crusaders\race
+128 error Windows_NT 6.1.7601
+129 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+130 error node v0.12.0
+131 error npm  v2.5.1
+132 error code ECONNRESET
+133 error network tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:795:
+133 error network
+133 error network This is most likely not a problem with npm itself
+133 error network and is related to network connectivity.
+133 error network In most cases you are behind a proxy or have bad network settings.
+133 error network
+133 error network If you are behind a proxy, please make sure that the
+133 error network 'proxy' config is set properly.  See: 'npm help config'
+134 verbose exit [ 1, true ]
