@@ -1,3 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^docklands5k.com [NC]
+RewriteRule ^(.*)$ http://www.docklands5k.com/$1 [L,R=301,NC]
+
+
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/xml
