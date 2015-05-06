@@ -19,7 +19,9 @@ $(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       
       var target = $(this.hash);
-      history.pushState(null, null, this.hash);
+      if (history.pushState) {
+        history.pushState(null, null, this.hash);
+      } 
 
       // toggle the menu
       if ($(this).hasClass("menu")) {
@@ -57,11 +59,12 @@ $(function() {
     toggle.addEventListener( "click", function(e) {
       e.preventDefault();
       var menu = $("#hamburger");
-      if (this.classList.contains("active") === true) {
-        this.classList.remove("active");
+
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
         menu.removeClass("show");
       } else {
-        this.classList.add("active");
+        $(this).addClass("active");
         menu.addClass("show");
       }
     });
@@ -114,17 +117,17 @@ switchAccordion = function(e) {
   e.preventDefault();
   var thisAnswer = e.target.parentNode.nextElementSibling;
   var thisQuestion = e.target;
-  if(thisAnswer.classList.contains('is-collapsed')) {
+  if($(thisAnswer).hasClass('is-collapsed')) {
     setAccordionAria(thisQuestion, thisAnswer, 'true');
   } else {
     setAccordionAria(thisQuestion, thisAnswer, 'false');
   }
-    thisQuestion.classList.toggle('is-collapsed');
-    thisQuestion.classList.toggle('is-expanded');
-    thisAnswer.classList.toggle('is-collapsed');
-    thisAnswer.classList.toggle('is-expanded');
+    $(thisQuestion).toggleClass('is-collapsed');
+    $(thisQuestion).toggleClass('is-expanded');
+    $(thisAnswer).toggleClass('is-collapsed');
+    $(thisAnswer).toggleClass('is-expanded');
   
-    thisAnswer.classList.toggle('animateIn');
+    $(thisAnswer).toggleClass('animateIn');
   };
 
   for (i=0,len=accordionToggles.length; i<len; i++) {

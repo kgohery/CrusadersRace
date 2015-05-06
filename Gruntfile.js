@@ -195,6 +195,15 @@ module.exports = function (grunt) {
         },
         src: 'less/styles.less',
         dest: 'dist/css/styles.css'
+      },
+      compileIEOnly: {
+        options: {
+          strictMath: true,
+          sourceMap: false,
+          outputSourceFiles: true
+        },
+        src: 'less/ie-only.less',
+        dest: 'dist/css/ie-only.css'
       }
     },
 
@@ -552,7 +561,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'uglify:custom']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileFontAwesome', 'less:compileCustom']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileFontAwesome', 'less:compileCustom', 'less:compileIEOnly']);
   //grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'uncss', 'cssmin:minifyCustom']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'uncss', 'cssmin']);
 
