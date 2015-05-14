@@ -1,3 +1,12 @@
-.container-fluid #hamburger {
-	background-color: #222222;
+.container-fluid {
+	#hamburger {
+		&.show {
+			display: block;
+			opacity: 1;
+		}
+
+		&:not(".show") {
+			opacity: 0;
+		}
+	}
 }
